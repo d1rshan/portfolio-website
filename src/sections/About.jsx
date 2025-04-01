@@ -1,11 +1,12 @@
 import { CardContainer, CardBody, CardItem } from "../components/CardContainer";
 import RainbowButton from "../components/RainbowButton";
 
+import "../index.css";
 const About = () => {
   return (
-    <div className="flex items-center justify-center h-screen ">
+    <section className="flex items-center justify-center h-screen reveal-section slide-left">
       <CardContainer>
-        <CardBody className="border border-white/[0.2]  rounded-xl p-6  h-auto w-[1200px] bg-white ">
+        <CardBody className="border border-white/[0.2]  rounded-xl p-6  h-auto w-[1100px] bg-white ">
           <CardItem
             translateZ={40}
             className="text-7xl font-medium tracking-tight text-black"
@@ -29,15 +30,9 @@ const About = () => {
             aliquid nulla quod repellat veniam repellendus, nihil unde quam ex
             corporis officia consequuntur distinctio vitae?
           </CardItem>
-          <CardItem
-            translateZ={20}
-            className="text-xl text-left sm:text-2xl text-gray-500 font-medium"
-          >
-            <RainbowButton className="text-black">Contact me</RainbowButton>
-          </CardItem>
         </CardBody>
       </CardContainer>
-    </div>
+    </section>
   );
 };
 export default About;

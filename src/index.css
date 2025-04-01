@@ -22,3 +22,104 @@ body{
   --color-4: 195 100% 63%;
   --color-5: 90 100% 63%;
 }
+
+/* Base styles for reveal sections */
+.reveal-section {
+  --reveal-distance: 30px;
+  --reveal-duration: 0.6s;
+  
+  /* Initial hidden state */
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+  
+  /* Animation settings */
+  view-timeline-name: --reveal;
+  view-timeline-axis: block;
+  animation-timeline: --reveal;
+  animation-name: reveal;
+  animation-range: entry 10% cover 30%;
+  animation-fill-mode: both;
+  animation-duration: var(--reveal-duration);
+}
+
+/* Animation keyframes */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-distance));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation variants */
+.reveal-section.slide-left {
+  --reveal-distance: 30px;
+  transform: translateX(calc(-1 * var(--reveal-distance)));
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(calc(-1 * var(--reveal-distance)));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reveal-section.slide-left {
+  animation-name: slide-left;
+}
+
+.reveal-section.slide-right {
+  --reveal-distance: 30px;
+  transform: translateX(var(--reveal-distance));
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(var(--reveal-distance));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reveal-section.slide-right {
+  animation-name: slide-right;
+}
+
+.reveal-section.zoom-in {
+  --reveal-scale: 0.9;
+  transform: scale(var(--reveal-scale));
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(var(--reveal-scale));
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal-section.zoom-in {
+  animation-name: zoom-in;
+}
+
+/* Optional: Add different animation timing */
+.reveal-section.fast {
+  --reveal-duration: 0.4s;
+}
+
+.reveal-section.slow {
+  --reveal-duration: 1s;
+}

@@ -5,7 +5,7 @@ const Projects = () => {
     <div className="h-screen w-full flex flex-col items-center justify-center gap-4">
       <h2 className="text-7xl font-medium tracking-tight">My latest work</h2>
       <div className="grid grid-cols-2 gap-6  overflow-hidden w-[1000px]">
-        <div className="bg-black border rounded-xl p-6 border-white/[0.2]  ">
+        <div className="relative text-black bg-white border rounded-xl p-6 border-white/[0.2]  ">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab
             officia quaerat fugiat voluptas commodi quos tempore at, esse
@@ -15,7 +15,7 @@ const Projects = () => {
             asperiores, id illum.
           </p>
         </div>
-        <div className=" bg-black border rounded-xl p-6 border-white/[0.2]  ">
+        <div className=" relative text-black bg-white border rounded-xl p-6 border-white/[0.2]  ">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab
             officia quaerat fugiat voluptas commodi quos tempore at, esse

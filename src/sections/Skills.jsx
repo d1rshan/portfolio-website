@@ -23,16 +23,13 @@ const Skills = () => {
     "Serverless Framework",
   ];
   return (
-    <div className="relative flex w-[100vw] m-auto h-screen flex-col items-center justify-center overflow-hidden">
-      <h2 className="text-7xl font-medium tracking-tight ">My Skills</h2>
+    <section className="relative flex w-[100vw] m-auto h-screen flex-col items-center justify-center overflow-hidden reveal-section zoom-in slow">
+      <h2 className="text-7xl font-medium tracking-tight mb-3 ">My Skills</h2>
       <VelocityScroll numRows={3} defaultVelocity={0.5}>
         {skills.map((skill) => (
-          <RainbowCard
-            key={skill}
-            className="text-5xl py-8 px-8 text-black mr-4"
-          >
+          <span className="text-5xl py-5 px-8 text-black bg-white w-fit mx-1.5 rounded-lg inline-block">
             {skill}
-          </RainbowCard>
+          </span>
         ))}
       </VelocityScroll>
       {/* Left blur effect */}
@@ -40,7 +37,7 @@ const Skills = () => {
 
       {/* Right Blur Effect */}
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/70 to-transparent"></div>
-    </div>
+    </section>
   );
 };
 export default Skills;

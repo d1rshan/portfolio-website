@@ -71,7 +71,7 @@ const ParallaxText = ({ children, baseVelocity = 100, ...props }) => {
       <motion.div className="inline-block" style={{ x }}>
         {Array.from({ length: repetitions }).map((_, i) => (
           <span key={i} ref={i === 0 ? textRef : null}>
-            {children}{" "}
+            {children}
           </span>
         ))}
       </motion.div>
@@ -88,7 +88,7 @@ const VelocityScroll = ({
 }) => {
   return (
     <div
-      className={`relative w-full text-4xl font-bold tracking-[-0.02em] md:text-7xl md:leading-[5rem] ${className}`}
+      className={`relative w-full text-4xl font-bold tracking-[-0.02em] md:text-7xl md:leading-[5rem] flex flex-col gap-4 ${className}`} // Added gap-4
       {...props}
     >
       {Array.from({ length: numRows }).map((_, i) => (
